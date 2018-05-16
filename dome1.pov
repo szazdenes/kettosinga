@@ -22,4 +22,6 @@ light_source {
 	shadowless
 }
 
+
+#declare height = 10;
 #include "dome1.inc"
