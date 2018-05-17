@@ -25,7 +25,7 @@ sphere {
 			#declare cylinderUnitStartPosZ = 0;
 			#declare cylinderUnitEndPosX = coloumnCenterX + R * cos(deg);;
 			#declare cylinderUnitEndPosY = coloumnCenterY + R * sin(deg);;
-			#declare cylinderUnitEndPosZ = height;
+			#declare cylinderUnitEndPosZ = 10;
 
 			cylinder {
 				<cylinderUnitStartPosX, cylinderUnitStartPosY, cylinderUnitStartPosZ>,     // Center of one end
