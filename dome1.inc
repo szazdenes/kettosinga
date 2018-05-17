@@ -1,10 +1,3 @@
-sphere {
-		<0,0,0>,30
-		pigment {color Red} 
-		hollow
-		finish {ambient 0.2 diffuse 0.0}
-	}
-
 #declare R = 1;
 #declare deg_step = 20 * pi/180.0; //deg
 #declare rot_step = 60 * pi/180.0; //deg
@@ -41,3 +34,14 @@ sphere {
 	}
 
 #end
+
+difference{
+	sphere{<0,0,0>, 12}
+	sphere{<0,0,0>, 8}
+	box{
+		<12,12,0>
+		<-12.01,-12.01,-12.01>
+	}
+	pigment{color Red}
+	translate 10*z
+}
