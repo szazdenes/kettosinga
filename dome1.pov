@@ -10,9 +10,9 @@ background { color White }
 
 camera {
 	fisheye
-	location <0, 0, -0.1>
+	location <0, 0, 0.1>
 	up y
-	right x
+	right -x
 	angle 180
 	look_at <0, 0, 1>
 	translate <0,0,0>
@@ -21,11 +21,11 @@ camera {
 }
 
 /*camera {
-	location <0, 0, -0.1>
-	look_at <0, 0, 1>
-	angle 140
-	translate <0,0,0>
-	rotate 90*pi/180.0*x
+	location <0, 0, 0.1>
+	look_at <0, 0, 0>
+	angle 100
+	translate <0,5,25>
+	rotate <90,0,0>
 }*/
 
 light_source {

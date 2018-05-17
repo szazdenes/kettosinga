@@ -36,12 +36,19 @@
 #end
 
 difference{
-	sphere{<0,0,0>, 12}
-	sphere{<0,0,0>, 8}
+	sphere{<0,0,0>, 11.5}
+	sphere{<0,0,0>, 8.5}
 	box{
-		<12,12,0>
-		<-12.01,-12.01,-12.01>
+		<11.5,11.5,0>
+		<-11.51,-11.51,-11.51>
 	}
-	pigment{color Red}
+	pigment{color Yellow}
 	translate 10*z
+}
+
+plane{
+	<0, 0, 1>, 0
+	pigment {
+		checker color Green, color Blue 
+	}
 }
