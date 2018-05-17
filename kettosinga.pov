@@ -22,6 +22,8 @@ camera {
 	right 1.*x
 	angle 180
 	look_at <0, 0, 1>
+	translate <0,0,0>
+	rotate <0,0,0>
 }
 
 
