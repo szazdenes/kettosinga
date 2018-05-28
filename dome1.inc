@@ -28,20 +28,45 @@
 					pigment { color Grey }
 				}
 			}
-	
-
 		#end
 	}
 
 #end
 
-difference{
-	sphere{<0,0,0>, 11.5}
-	sphere{<0,0,0>, 8.5}
-	box{
-		<11.5,11.5,0>
-		<-11.51,-11.51,-11.51>
+union{
+	difference{
+		sphere{<0,0,0>, 12.5}
+		sphere{<0,0,0>, 12}
+		box{
+			<12.5,12.5,0>
+			<-12.51,-12.51,-12.51>
+		}
 	}
+	difference{
+		cylinder{<0,0,0>, <0,0,-5>, 12.5}
+		cylinder{<0,0,0>, <0,0,-5>, 12 open}
+	}
+	pigment{color Red}
+	translate 10*z
+}
+
+
+difference{
+	difference{
+		sphere{<0,0,0>, 11.5}
+		sphere{<0,0,0>, 8.5}
+		box{
+			<11.5,11.5,0>
+			<-11.51,-11.51,-11.51>
+		}
+	}
+	union{
+		#for (deg, 30*pi/180, 360*pi/180, 60*pi/180)
+		cylinder {< 0, 0, 0>, < 15*cos(deg), 15*sin(deg), 2>, 4}
+		cylinder {< 0, 0, 0>, < 15*cos(deg), 15*sin(deg), 8>, 4}
+		#end
+	}
+	
 	pigment{color Yellow}
 	translate 10*z
 }
