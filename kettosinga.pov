@@ -2,9 +2,7 @@
 global_settings { assumed_gamma 1.0}
 
 #include "colors.inc"
-#include "textures.inc"
-#include "shapes3.inc"
-#include "stones.inc"
+#include "textures"
 
 /*camera {
 	location <0, 0, 0.1>
@@ -14,8 +12,13 @@ global_settings { assumed_gamma 1.0}
 	rotate <90,0,45>
 }*/
 
+sky_sphere {
+    pigment {
+       Blue_Sky
+    }
+}
 
-background { color White }
+
 //light_source{ <300, 300, -1000> White }
 
 camera {
@@ -37,18 +40,18 @@ light_source {
 }
 
 
-#declare height = 20;
+#declare height = 14.25;
 #include "dome1.inc"
 
 #declare grav = 9.81;
 #declare time_n = clock;
 #declare time_step = 0.01;
 
-#declare length1 = 8;
-#declare length2 = 8;
+#declare length1 = 7;
+#declare length2 = 7;
 #declare m1 = 1;
 #declare m2 = 1;
-#declare theta1_0 = 50;	//deg
+#declare theta1_0 = 40;	//deg
 #declare theta2_0 = 0;	//deg
 
 #declare w1_0 = 0; //angular velocity

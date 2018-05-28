@@ -6,7 +6,11 @@ global_settings { assumed_gamma 1.0}
 #include "shapes3.inc"
 #include "stones.inc"
 
-background { color White }
+sky_sphere {
+    pigment {
+       Blue_Sky
+    }
+}
 
 /*camera {
 	fisheye
