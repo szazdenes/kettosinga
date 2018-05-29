@@ -89,13 +89,3 @@
     }
     
 }
-
- 
-union{
-    object{coloumns}
-    object{dome}    
-    rotate 30*z
-}
-
-                  
-object{board}
