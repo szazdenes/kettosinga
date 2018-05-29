@@ -48,10 +48,11 @@ light_source {
 }
 
 #include "dome2.inc"
-#include "inga.inc"
+#include "inga.pov"
+#include "exgrass2.pov"
 
 object{
 	dome_net
 	translate 5*z
 }             
-object{board}
+//object{board2}

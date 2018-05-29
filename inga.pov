@@ -5,7 +5,6 @@ global_settings { assumed_gamma 1.0}
 #include "textures"
 
 #declare height = 14.25;
-#include "dome1.inc"
 
 #declare grav = 9.81;
 #declare time_n = clock;

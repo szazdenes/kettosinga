@@ -9,17 +9,17 @@ sky_sphere {
     }
 }
 
-/*camera {
+camera {
 	location <0, 0, 0.1>
 	look_at <0, 0, 0>
 	angle 100
 	translate <0,5,25>
 	rotate <90,0,45>
-}*/
+}
 
 //light_source{ <300, 300, -1000> White }
 
-camera {
+/*camera {
 	fisheye
 	location <0, 0, 0.1>
 	up y
@@ -28,7 +28,7 @@ camera {
 	look_at <0, 0, 1>
 	translate <0,0,0>
 	rotate <0,0,0>
-}
+}*/
 
 
 light_source {
@@ -37,7 +37,7 @@ light_source {
 }
 
 #include "dome1.inc"
-#include "inga.inc"
+#include "inga.pov"
 
 union{
 	object{coloumns}

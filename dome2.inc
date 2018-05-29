@@ -1,7 +1,7 @@
 #include "colors.inc"
 #include "textures.inc"
 
-#declare board = plane{
+#declare board2 = plane{
 	<0, 0, 1>, 0
 	pigment {
 		checker color White, color Black 
