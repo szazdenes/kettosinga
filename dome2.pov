@@ -55,4 +55,4 @@ object{
 	dome_net
 	translate 5*z
 }             
-//object{board2}
+object{board2}

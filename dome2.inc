@@ -4,7 +4,7 @@
 #declare board2 = plane{
 	<0, 0, 1>, 0
 	pigment {
-		checker color White, color Black 
+		Tan*0.3 
 	}
 }
 

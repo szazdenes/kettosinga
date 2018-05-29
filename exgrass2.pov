@@ -23,13 +23,6 @@
 #include "colors.inc"
 #include "mgrass.inc"
 
-#declare PdV=<0,55,-80>;
-#declare PdA=<0,12,10>;
-camera{location PdV direction 2*z up y sky y right x*4/3  look_at PdA}
-
-light_source{0 White*2 translate <-200, 400, -300>}
-light_source{PdA White*0.5 shadowless}
-
 #declare Blanc1=rgb<0.90,0.81,0.81>;
 
 #declare Green1=rgb<230,170,50>/255;
@@ -81,15 +74,15 @@ spotted
 // --------------------------------------
 // Final number of triangles = nBlade x nBlade x segBlade x 2 (or 4 if dofold = true)
 // --------------------------------------
-#declare lPatch=50;               // size of patch
-#declare nBlade=15;                // number of blades per line (there will be nBlade x nBlade blades)
+#declare lPatch=80;               // size of patch
+#declare nBlade=60;                // number of blades per line (there will be nBlade x nBlade blades)
 //#declare nBlade=4;                // number of blades per line (there will be nBlade x nBlade blades)
 #declare ryBlade = 0;            // initial y rotation of blade
 #declare segBlade= 10;            // number of blade segments
-#declare lBlade = 10;             // length of blade
-#declare wBlade = 0.8;            // width of blade at start
-#declare wBladeEnd = 0.3;         // width of blade at the end
-#declare doSmooth=false;          // true makes smooth triangles
+#declare lBlade = 1.5;             // length of blade
+#declare wBlade = 0.15;            // width of blade at start
+#declare wBladeEnd = 0.01;         // width of blade at the end
+#declare doSmooth=true;          // true makes smooth triangles
 #declare startBend = <0,1,0.3>;   // bending of blade at start (<0,1,0>=no bending)
 #declare vBend = <0,1,0>;         // force bending the blade (<0,1,1> = 45°)
 #declare pwBend = 4;              // bending power (how slowly the curve bends)
@@ -105,9 +98,9 @@ spotted
 // --------------------------------------
 // Prairie parameters
 // --------------------------------------
-#declare nxPrairie=3;             // number of patches for the first line
-#declare addPatches=1;            // number of patches to add at each line
-#declare nzPrairie=5;             // number of lines of patches
+#declare nxPrairie=80;             // number of patches for the first line
+#declare addPatches=15;            // number of patches to add at each line
+#declare nzPrairie=45;             // number of lines of patches
 #declare rd=seed(779);            // random seed
 #declare stdscale=1;              // stddev of scale
 #declare stdrotate=1;             // stddev of rotation
@@ -124,11 +117,7 @@ spotted
 #end        
 
 object{MakePrairie(lPatch,nxPrairie,addPatches,nzPrairie,objectPatch,rd,stdscale,stdrotate,doTest)
-    texture{T_Grass scale 40}
+	texture{T_Grass scale 40}
+	rotate <95, 0, 45>
+	translate <0,-6,0>	
 }  
-
-//cylinder{0,y*30,5 texture{T_Grass scale 40}}
-//plane{y,0 pigment{Tan*0.3}}
-//plane{y,0 pigment{Tan}}
-//background{rgb<0.5,0.7,1>*2}
-
