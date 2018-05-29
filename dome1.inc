@@ -14,7 +14,7 @@
 #declare board = plane{
 	<0, 0, 1>, 0
 	pigment {
-		checker color White, color Black 
+		Pink_Granite 
 	}
 }
 
