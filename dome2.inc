@@ -4,7 +4,16 @@
 #declare board2 = plane{
 	<0, 0, 1>, 0
 	pigment {
-		Tan*0.3 
+		granite
+		turbulence 3
+		color_map {
+			[0.000 color rgb <0.5, 0.5, 0.2>]
+			[0.25 color rgb <0.7, 1, 0.2>]
+			[0.5 color rgb <1, 0.4, 0.2>]
+			[0.75 color rgb <.5, 0.9, 0.2>]
+			[1 color rgb <0.3, 0.9, 0.2>]
+		}
+		scale 0.035
 	}
 }
 
