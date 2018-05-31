@@ -4,26 +4,28 @@ global_settings { assumed_gamma 1.0}
 #include "colors.inc"
 #include "textures"
 
+/*
+//-------------------------inga parameters
 #declare height = 14.25;
-
 #declare grav = 9.81;
-#declare time_n = clock;
 #declare time_step = 0.01;
-
 #declare length1 = 7;
 #declare length2 = 7;
 #declare m1 = 1;
 #declare m2 = 1;
 #declare theta1_0 = 40;	//deg
 #declare theta2_0 = 0;	//deg
-
 #declare w1_0 = 0; //angular velocity
 #declare w2_0 = 0;
+//---------------------------------------
+*/
 
 #declare theta1 = theta1_0 * pi/180.0;  //rad
 #declare theta2 = theta2_0 * pi/180.0;	//rad
 #declare w1 = w1_0;
 #declare w2 = w2_0;
+
+#declare time_n = clock;
 
 #include "kettosinga.inc"
 

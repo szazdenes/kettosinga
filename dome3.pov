@@ -9,23 +9,12 @@ sky_sphere {
     }
 }
 
-sphere {
-	0*x,1800
-	pigment {
-		image_map {png "volgy2W.png" map_type 1 interpolate 2} 
-		scale -1
-		rotate -90*x 
-	}
-	hollow
-	finish {ambient 0.2 diffuse 0.0}
-}
-
 camera {
 	location <0, 0, 0.1>
 	look_at <0, 0, 0>
 	angle 100
-	translate <0,5,25>
-	rotate <90,0,45>
+	translate <0,7,30>
+	rotate <85,0,90>
 }
 
 //light_source{ <300, 300, -1000> White }
@@ -41,18 +30,17 @@ camera {
 	rotate <0,0,0>
 }*/
 
-
 light_source {
 	<0.0,0.0,0.0> color rgb <1.0, 1.0, 1.0>
 	shadowless
 }
 
 //-------------------------inga parameters
-#declare height = 14.25;
+#declare height = 20;
 #declare grav = 9.81;
 #declare time_step = 0.01;
-#declare length1 = 7;
-#declare length2 = 7;
+#declare length1 = 9;
+#declare length2 = 9;
 #declare m1 = 1;
 #declare m2 = 1;
 #declare theta1_0 = 40;	//deg
@@ -61,12 +49,28 @@ light_source {
 #declare w2_0 = 0;
 //---------------------------------------
 
-#include "dome2.inc"
+#include "dome3.inc"
 #include "inga.pov"
-#include "exgrass2.pov"
 
+object{board}
+union{
+	object{walls}
+	object{cover}
+}
+object{columns}
 object{
-	dome_net
-	translate 5*z
-}             
-object{board2}
+	bench
+	scale <1,1,0.3> rotate<90,0,0> translate< 0.00,-10.00,0.00>
+}
+object{
+	bench
+	scale <1,1,0.3> rotate<90,0,180> translate< 0.00,10.00,0.00>
+}
+object{
+	bench
+	scale <1,1,0.3> rotate<90,0,90> translate< 10.00,0.00,0.00>
+}
+object{
+	bench
+	scale <1,1,0.3> rotate<90,0,-90> translate< -10.00,0.00,0.00>
+}
