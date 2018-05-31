@@ -22,7 +22,7 @@
 		<0.99,0.99,0.1>
 		<-0.99,-0.99,-1>
 	}
-	texture{Glass2}
+	texture{Glass}
 	scale <12,12,wall_height>
 	translate wall_height*z
 }
