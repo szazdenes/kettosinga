@@ -2,6 +2,7 @@
 global_settings { assumed_gamma 1.0}
 
 #include "textures.inc"
+#include "colors.inc" 
 
 sky_sphere {
     pigment {
@@ -9,15 +10,24 @@ sky_sphere {
     }
 }
 
-/*camera {
+/*fog { 
+	fog_type   2
+	distance   70
+	color      White*0.75
+	fog_offset 0.1
+	fog_alt    1.5
+	turbulence 1.8
+}*/   
+
+camera {
 	location <0, 0, 0.1>
 	look_at <0, 0, 0>
 	angle 100
-	translate <0,5,25>
-	rotate <90,0,45>
-}*/
+	translate <0,5,35>
+	rotate <85,0,50>
+}
 
-camera {
+/*camera {
 	fisheye
 	location <0, 0, 0.1>
 	up y
@@ -26,7 +36,7 @@ camera {
 	look_at <0, 0, 1>
 	translate <0,0,0>
 	rotate <0,0,0>
-}
+}*/
 
 
 light_source {
@@ -48,12 +58,19 @@ light_source {
 #declare w2_0 = 0;
 //---------------------------------------
 
-#include "env1.inc"
+//-----------pyramid parameters
+#declare Top_Width = 3.00;   // half width at the top
+#declare Base_Width = 14.50;  // half width at the base
+#declare Total_Height = 14.50; // total height of the pyramid
+#declare Number_of_Steps = 8; // number of steps
+//-------------------------------------
+
+#include "env4.inc"
 #include "inga.pov"
 
-union{
-	object{coloumns}
-	object{dome}    
-	rotate 30*z
-}             
 object{board}
+#declare R = 25;
+wall_section(R, 0, 80, 5)
+wall_section(R, 90, 80, 5)
+
+object{hollow_pyramid rotate 20*z}

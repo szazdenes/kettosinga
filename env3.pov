@@ -17,8 +17,6 @@ sky_sphere {
 	rotate <85,0,90>
 }*/
 
-//light_source{ <300, 300, -1000> White }
-
 camera {
 	fisheye
 	location <0, 0, 0.1>
