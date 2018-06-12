@@ -10,24 +10,24 @@ sky_sphere {
     }
 }
 
-/*fog { 
+fog { 
 	fog_type   2
-	distance   70
-	color      White*0.75
+	distance   110
+	color      White*0.35
 	fog_offset 0.1
 	fog_alt    1.5
-	turbulence 1.8
-}*/   
+	turbulence 1.2
+}   
 
-camera {
+/*camera {
 	location <0, 0, 0.1>
 	look_at <0, 0, 0>
 	angle 100
 	translate <0,5,35>
 	rotate <85,0,50>
-}
+}*/
 
-/*camera {
+camera {
 	fisheye
 	location <0, 0, 0.1>
 	up y
@@ -36,7 +36,7 @@ camera {
 	look_at <0, 0, 1>
 	translate <0,0,0>
 	rotate <0,0,0>
-}*/
+}
 
 
 light_source {
@@ -69,8 +69,27 @@ light_source {
 #include "inga.pov"
 
 object{board}
-#declare R = 25;
-wall_section(R, 0, 80, 5)
-wall_section(R, 90, 80, 5)
+#declare R = 30;
+wall_section(R, 0, 80, 3)
+wall_section(R, 90, 80, 3)
 
 object{hollow_pyramid rotate 20*z}
+
+//-------------create tree
+#include "env4_tree.inc"
+
+#for(pos, 200, 350, 20)
+	union{ 
+		object{ lombardy_poplar_13_stems
+			texture{ Stem_Texture }
+		} 
+		object{ lombardy_poplar_13_leaves  
+			double_illuminate
+			texture{ Leaves_Texture_1 }   
+			interior_texture{ Leaves_Texture_2 }   
+		} 
+		#local Rnd_1 = seed (1153); 
+		rotate <90,0,180*rand(Rnd_1)>
+		translate<(R-8*rand(Rnd_1))*cos(pos*pi/180),(R-8*rand(Rnd_1))*sin(pos*pi/180),0>
+	}
+#end  
