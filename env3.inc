@@ -102,7 +102,7 @@
                     5.0,// Chair_Half_Width 
                     0.3,// Chair_Feet_Radius,
                   ) 
-        texture{ White_Marble scale 0.3} 
+        texture{ White_Marble scale 0.1} 
 }
 
 #declare cover = union{
@@ -130,5 +130,5 @@
 		box{<1,1,0>, <-1,-1,-1> scale 10.01 translate wall_height*z}
 		
 	}
-	texture{Yellow_Pine}
+	texture{Yellow_Pine scale 0.5}
 }

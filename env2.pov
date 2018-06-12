@@ -20,17 +20,17 @@ sky_sphere {
 	finish {ambient 0.2 diffuse 0.0}
 }*/
 
-camera {
+/*camera {
 	location <0, 0, 0.1>
 	look_at <0, 0, 0>
 	angle 100
 	translate <0,5,25>
 	rotate <90,0,45>
-}
+}*/
 
 //light_source{ <300, 300, -1000> White }
 
-/*camera {
+camera {
 	fisheye
 	location <0, 0, 0.1>
 	up y
@@ -39,7 +39,7 @@ camera {
 	look_at <0, 0, 1>
 	translate <0,0,0>
 	rotate <0,0,0>
-}*/
+}
 
 
 light_source {
@@ -70,7 +70,7 @@ object{
 }             
 object{board2}
 
-//set grass parameters
+//---------------------------set grass parameters
 
 #include "colors.inc"
 #include "mgrass.inc"
@@ -169,7 +169,7 @@ spotted
 #end        
 
 object{MakePrairie(lPatch,nxPrairie,addPatches,nzPrairie,objectPatch,rd,stdscale,stdrotate,doTest)
-	texture{T_Grass scale 40}
-	rotate <95, 0, 45>
-	translate <0,-6,0>	
+	texture{T_Grass scale 1}
+	rotate <90, 0, 45>
+	translate <0,-4, 0>	
 }  

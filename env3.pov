@@ -9,17 +9,17 @@ sky_sphere {
     }
 }
 
-camera {
+/*camera {
 	location <0, 0, 0.1>
 	look_at <0, 0, 0>
 	angle 100
 	translate <0,7,30>
 	rotate <85,0,90>
-}
+}*/
 
 //light_source{ <300, 300, -1000> White }
 
-/*camera {
+camera {
 	fisheye
 	location <0, 0, 0.1>
 	up y
@@ -28,7 +28,7 @@ camera {
 	look_at <0, 0, 1>
 	translate <0,0,0>
 	rotate <0,0,0>
-}*/
+}
 
 light_source {
 	<0.0,0.0,0.0> color rgb <1.0, 1.0, 1.0>
