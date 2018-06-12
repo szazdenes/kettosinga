@@ -19,15 +19,15 @@ fog {
 	turbulence 1.2
 }   
 
-/*camera {
+camera {
 	location <0, 0, 0.1>
 	look_at <0, 0, 0>
 	angle 100
-	translate <0,5,35>
-	rotate <85,0,50>
-}*/
+	translate <0,5,25>
+	rotate <85,0,40>
+}
 
-camera {
+/*camera {
 	fisheye
 	location <0, 0, 0.1>
 	up y
@@ -36,7 +36,7 @@ camera {
 	look_at <0, 0, 1>
 	translate <0,0,0>
 	rotate <0,0,0>
-}
+}*/
 
 
 light_source {

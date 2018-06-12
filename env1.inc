@@ -14,7 +14,8 @@
 #declare board = plane{
 	<0, 0, 1>, 0
 	pigment {
-		Pink_Granite 
+		Pink_Granite
+		scale 0.05
 	}
 }
 

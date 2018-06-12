@@ -5,8 +5,9 @@
 
 #declare board = plane{
 	<0, 0, 1>, 0
-	pigment {
-		checker color Black color White
+	texture {
+		pigment{ color rgb <0.5,0.4,0.3>}
+		normal { bumps 0.80 scale 0.30}
 	}
 }
 
