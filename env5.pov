@@ -48,3 +48,12 @@ light_source {
 #declare w1_0 = 0; //angular velocity
 #declare w2_0 = 0;
 //---------------------------------------
+
+#declare R = 20;
+#declare height = 5;
+#declare thick = 1;
+
+#include "env5.inc"
+
+object{water}
+object{makeCircuarBase}
