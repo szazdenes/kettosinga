@@ -71,7 +71,6 @@ object{board2}
 //---------------------------set grass parameters
 
 #include "colors.inc"
-#include "mgrass.inc"
 
 #declare Blanc1=rgb<0.90,0.81,0.81>;
 

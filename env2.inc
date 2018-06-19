@@ -221,3 +221,29 @@
 	#end
 
 #end
+
+#macro MakePrairie(lPatch,nxPrairie,addPatches,nzPrairie,objectPatch,rd,stdscale,stdrotate,doTest)
+	union{
+		#local zCount=0;
+		#local nxCounttmp=nxPrairie;
+		#while (zCount<nzPrairie)                            
+			#local xCount=0;
+		
+			#while (xCount<nxCounttmp)
+				
+				#if (doTest=true)
+		//                        sphere{<-nxCounttmp*0.5+xCount,0,zCount>*lPatch,lPatch*0.5 pigment{Red} scale <1,0.2,1>}
+				        sphere{0,lPatch*0.5 pigment{Red} scale <1,0.2,1>
+				        scale (1+stdscale*rand(rd)) rotate y*360*(0.5-rand(rd))*stdrotate 
+				        translate <xCount-(nxCounttmp-1)*0.5,0,zCount>*lPatch}
+				#else
+				        object{objectPatch scale (1+stdscale*rand(rd)) rotate y*360*(0.5-rand(rd))*stdrotate translate <-(nxCounttmp-1)*0.5+xCount,0,zCount>*lPatch}
+				#end
+				#local xCount=xCount+1;
+			#end
+			#local nxCounttmp=nxCounttmp+addPatches;
+			#local zCount=zCount+1;
+		#end
+	}
+#end
+
